@@ -21,7 +21,7 @@ const AboutSection = () => {
         </div>
 
         <div className="about__row-reverse">
-          <div ref={ref} className="flex items-center text-center gap-x-24">
+          <div ref={ref} className="flex items-center text-center gap-x-24 flex-col sm:flex-col lg:flex-row md:flex-row xl:flex-row  ">
             <div className={`col-lg-6 ${inView ? 'slideInRight' : 'opacity-0 -translate-x-10'}`}>
               <img
                 decoding="async"
@@ -32,7 +32,7 @@ const AboutSection = () => {
             </div>
 
             <div className={`col-lg-6 p ${inView ? 'slideInLeft' : 'opacity-0 -translate-x-10'}`}>
-              <div className="about__content flex flex-col gap-10">
+              <div className="about__content flex flex-col  gap-10">
                 <div className="section__title md:text-start">
                   <span className="sub-title text-center text-2xl text-text4 font-semibold">Create and Invest</span>
                   <h2 className="title text-5xl text-center md:text-start md:text-8xl font-roboto font-extrabold mt-3">Create your own NFT</h2>
