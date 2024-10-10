@@ -15,7 +15,7 @@ const AboutSection = () => {
         <div className="row justify-center mb-20">
           <div className="col-xl-8 col-lg-10">
             <div className="section__title text-center">
-              <h2 className="text-2xl md:text-8xl font-roboto font-extrabold">About the platform</h2>
+              <h2 className="text-5xl md:text-8xl font-roboto font-extrabold">About the platform</h2>
             </div>
           </div>
         </div>
