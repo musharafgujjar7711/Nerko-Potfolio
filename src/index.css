@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+  
+@keyframes spin-grow {
+  0% {
+    transform: scale(0.8);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1);
+    opacity: 0.7;
+  }
+  100% {
+    transform: scale(0.8);
+    opacity: 1;
+  }
+}
+
+.animate-spin-grow {
+  animation: spin-grow 1s forwards; /* Use forwards to keep the last state */
+}
+
+
+.tg-animation-spin {
+  animation: spin 4s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* styles.css or your CSS file */
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.fadeInLeft {
+  animation: fadeInLeft 1s ease forwards;
+}
+
+.fadeInRight {
+  animation: fadeInRight 1s ease forwards;
+}
+
+
+@keyframes slideInUp {
+  0% {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideDown {
+  0% {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.slideInUp {
+  animation: slideInUp 0.5s forwards;
+}
+
+.slideDown {
+  animation: slideDown 0.5s forwards;
+}
+
+
+@keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .fade-in-up {
+    animation: fadeInUp 0.6s ease-in-out forwards;
+  }
+  
+
+.tg-animation-spin {
+    animation: spin 10s linear infinite;
+}
+
+.tg-circle-text-path {
+    fill: none;
+    stroke: currentColor; /* Use current color for the stroke */
+    stroke-width: 1px;
+}
+.dara {
+    opacity: 0.25; /* Adjust the value as needed */
+  }
+  .roadmap-area {
+    overflow: hidden;
+  }
+  
+  .roadmap__card {
+    transition: opacity 0.3s ease;
+  }
+  
+
+  /* styles.css or your CSS file */
+@keyframes slideInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.slideInLeft {
+  animation: slideInLeft 1s ease forwards;
+}
+
+.slideInRight {
+  animation: slideInRight 1s ease forwards;
+}
