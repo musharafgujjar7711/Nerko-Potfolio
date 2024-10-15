@@ -1,13 +1,30 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { BiLogoTwitter } from 'react-icons/bi';
-import { FaDiscord } from 'react-icons/fa';
+import { FaDiscord, FaMoon, FaSun } from 'react-icons/fa';
 import { GrAppsRounded } from 'react-icons/gr';
 import { AiOutlineClose } from 'react-icons/ai';
+
 
 const Header = () => {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);
     const [isModalOpen, setIsModalOpen] = useState(false);
+    const[isNightMode,setIsNightMode] =useState(false);
+
+    const toggleMode=()=>{
+        setIsNightMode((premode) =>!premode)
+    }
+         useEffect(()=>{
+            if(isNightMode){
+                document.body.style.backgroundColor="#000"
+                document.body.style.color="#fff" 
+            }
+            else{
+                document.body.style.backgroundColor="#fff"
+                document.body.style.color="#000"
+            }
+         },[isNightMode])
+
 
     const toggleMobileMenu = () => {
         setIsMobileMenuOpen(!isMobileMenuOpen);
@@ -60,15 +77,18 @@ const Header = () => {
                     <div className="relative flex items-center flex-row-reverse gap-x-10">
                         <button
                             onClick={toggleModal}
-                            className="btn border hidden md:block border-gray-300 py-2 px-4 rounded-full hover:bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 duration-200 hover:text-white font-medium w-full md:w-auto"
+                            className="btn text-black border hidden md:block border-gray-300 py-2 px-4 rounded-full hover:bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 duration-200 hover:text-white font-medium w-full md:w-auto"
                         >
                             Connect wallet
                         </button>
+                        <button onClick={toggleMode}  >
+                                 {isNightMode ? <FaSun className=' text-yellow-400' size={30}/> :<FaMoon className='text-black' size={30}/>}
+                            </button>
                         <div className="flex space-x-4">
-                            <a href="#" className="text-gray-800 ">
+                            <a href="#" className="text-blue-700">
                                 <BiLogoTwitter size={30} className="hover:text-jamo duration-300" />
                             </a>
-                            <a href="#">
+                            <a href="#" className=' text-red-500'>
                                 <FaDiscord size={30} className="hover:text-jamo duration-300" />
                             </a>
                             <div className="mobile-nav-toggler cursor-pointer" onClick={toggleMobileMenu}>
@@ -110,6 +130,7 @@ const Header = () => {
                     <div className="bg-white rounded-lg p-6 w-96">
                         <div className="flex justify-between items-center">
                             <h2 className="text-xl font-semibold">Connect Wallet</h2>
+                           
                             <button onClick={toggleModal} className="text-gray-600">
                                 <i className="flaticon-close-1"></i>
                             </button>
